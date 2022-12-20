@@ -1,9 +1,13 @@
-//
-//  Movie.swift
-//  DaffyTypeaheadProject
-//
-
 import Foundation
 
-/// Object that stores properties of an individual movie we get back from the API.
-struct Movie: Codable {}
+struct Movie: Codable {
+    let posterPath: String?
+    let title: String
+    let backdropPath: String?
+    let id: Int
+    let overview: String
+    let releaseDate: String
+    let popularity: Double
+    let voteCount: Int
+    let voteAverage: Double
+}

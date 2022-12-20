@@ -14,20 +14,19 @@ protocol Endpoint {
 
 /// API details for the Movie Database.
 class MovieAPI: Endpoint {
-    // TODO: update with your API key
-    static let apiKey = ""
-
-    // TODO: update return values for protocol properties
+    static let apiKey = SecretsProvider().getAPIKey()
+    
+    var page: Int = 0
 
     var baseURL: String {
-        return ""
+        "https://api.themoviedb.org/3"
     }
 
     var path: String {
-        return ""
+        return "\(baseURL)/movie/top_rated?api_key=\(MovieAPI.apiKey)&language=en-US&page=\(page)&include_adult=false"
     }
 
     var url: URL? {
-        return nil
+        URL(string: path)
     }
 }
