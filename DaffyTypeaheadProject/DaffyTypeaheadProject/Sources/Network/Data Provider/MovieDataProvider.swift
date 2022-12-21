@@ -9,10 +9,12 @@ import Foundation
 class MovieDataProvider {
    // TODO: `loadMovies` and `loadMovieDetails` methods
     let movieAPI = MovieAPI()
-    let serialQueue = DispatchQueue(label: "appendMovieQueue")
     
     func loadMovies(completion: @escaping ([Movie]?) -> Void) {
         var movies = [Movie]()
+        let serialQueue = DispatchQueue(label: "appendMovieQueue")
+        
+        // Setting an arbitrary value for number of results in order to limit API calls in test app
         let lastResult = 50
         for page in 1...lastResult {
             getMoviePage(page: page) { result in
@@ -21,7 +23,7 @@ class MovieDataProvider {
                     print("Error fetching movie data: ", error)
                 case .success(let results):
                     if let results = results {
-                        self.serialQueue.sync {
+                        serialQueue.sync {
                             movies.append(contentsOf: results.results)
                         }
                     }

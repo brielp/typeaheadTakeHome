@@ -11,5 +11,6 @@ class MovieTableViewCell: UITableViewCell {
     
     func setupCell(movie: Movie) {
         textLabel?.text = movie.title
+        detailTextLabel?.text = String(movie.releaseDate.prefix(4))
     }
 }

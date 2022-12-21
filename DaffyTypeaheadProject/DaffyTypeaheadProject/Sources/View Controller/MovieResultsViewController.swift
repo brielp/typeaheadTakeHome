@@ -28,9 +28,15 @@ class MovieResultsViewController: UIViewController {
         tableView.delegate = self
         searchBar.delegate = self
         
+        setUpView()
+    }
+    
+    func setUpView() {
+        title = "Top Rated Movies"
+        
         view.bringSubviewToFront(activityIndicator)
         activityIndicator.startAnimating()
-        title = "Top Rated Movies"
+        
         searchBar.searchBarStyle = .minimal
         
         viewModel.getMovieData { movies in
@@ -45,12 +51,10 @@ class MovieResultsViewController: UIViewController {
 }
 
 extension MovieResultsViewController: UITableViewDataSource, UITableViewDelegate {
-    // TODO: edit `numberOfRowsInSection` to return the right number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
     
-    // TODO: edit `cellForRowAt` to return the proper cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as? MovieTableViewCell {
             cell.setupCell(movie: movies[indexPath.row])
@@ -74,5 +78,9 @@ extension MovieResultsViewController: UISearchBarDelegate {
             self.movies = self.viewModel.filterMovies(by: searchText)
             self.activityIndicator.stopAnimating()
         }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.searchTextField.resignFirstResponder()
     }
 }

@@ -11,8 +11,8 @@ struct Secrets: Codable {
     let apiKey: String
 }
 
+/// Class to extract keys from JSON file
 class SecretsProvider {
-    
     func getAPIKey() -> String {
         if let data = readLocalFile() {
             let string = parse(jsonData: data)
@@ -48,5 +48,4 @@ class SecretsProvider {
             return nil
         }
     }
-    
 }

@@ -18,6 +18,7 @@ class MovieDetailViewController: UIViewController {
     
     var movie: Movie?
     
+    // User interaction data not currently stored - idea for future expansion of the app
     @IBAction func thumbsUpPressed(_ sender: UIButton) {
         thumbsUpButton.tintColor = .systemGreen
         thumbsDownButton.tintColor = .systemGray
@@ -27,6 +28,7 @@ class MovieDetailViewController: UIViewController {
         thumbsDownButton.tintColor = .systemRed
         thumbsUpButton.tintColor = .systemGray
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let movie = movie else {

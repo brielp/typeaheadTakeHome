@@ -24,7 +24,18 @@
 		DE4C16FE2952407400E8FE14 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = DE4C16FD2952407400E8FE14 /* secrets.json */; };
 		DE4D8DF229522B14004E54E3 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DE4D8DF129522B13004E54E3 /* appIcon.png */; };
 		DE4D8DF429523344004E54E3 /* noImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DE4D8DF329523344004E54E3 /* noImage.png */; };
+		DEF81E04295283CD00ED5A16 /* DaffyTypeaheadProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF81E03295283CD00ED5A16 /* DaffyTypeaheadProjectTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEF81E05295283CD00ED5A16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 430E5786285BA79800E126B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 430E578D285BA79800E126B9;
+			remoteInfo = DaffyTypeaheadProject;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		430E578E285BA79800E126B9 /* DaffyTypeaheadProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaffyTypeaheadProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,10 +57,19 @@
 		DE4C16FD2952407400E8FE14 /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		DE4D8DF129522B13004E54E3 /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
 		DE4D8DF329523344004E54E3 /* noImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImage.png; sourceTree = "<group>"; };
+		DEF81E01295283CD00ED5A16 /* DaffyTypeaheadProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaffyTypeaheadProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEF81E03295283CD00ED5A16 /* DaffyTypeaheadProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaffyTypeaheadProjectTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		430E578B285BA79800E126B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEF81DFE295283CC00ED5A16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				430E5790285BA79800E126B9 /* DaffyTypeaheadProject */,
+				DEF81E02295283CD00ED5A16 /* DaffyTypeaheadProjectTests */,
 				430E578F285BA79800E126B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				430E578E285BA79800E126B9 /* DaffyTypeaheadProject.app */,
+				DEF81E01295283CD00ED5A16 /* DaffyTypeaheadProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +210,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		DEF81E02295283CD00ED5A16 /* DaffyTypeaheadProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				DEF81E03295283CD00ED5A16 /* DaffyTypeaheadProjectTests.swift */,
+			);
+			path = DaffyTypeaheadProjectTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,6 +238,24 @@
 			productReference = 430E578E285BA79800E126B9 /* DaffyTypeaheadProject.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DEF81E00295283CC00ED5A16 /* DaffyTypeaheadProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEF81E07295283CD00ED5A16 /* Build configuration list for PBXNativeTarget "DaffyTypeaheadProjectTests" */;
+			buildPhases = (
+				DEF81DFD295283CC00ED5A16 /* Sources */,
+				DEF81DFE295283CC00ED5A16 /* Frameworks */,
+				DEF81DFF295283CC00ED5A16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEF81E06295283CD00ED5A16 /* PBXTargetDependency */,
+			);
+			name = DaffyTypeaheadProjectTests;
+			productName = DaffyTypeaheadProjectTests;
+			productReference = DEF81E01295283CD00ED5A16 /* DaffyTypeaheadProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,11 +263,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					430E578D285BA79800E126B9 = {
 						CreatedOnToolsVersion = 13.3;
+					};
+					DEF81E00295283CC00ED5A16 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 430E578D285BA79800E126B9;
 					};
 				};
 			};
@@ -237,6 +289,7 @@
 			projectRoot = "";
 			targets = (
 				430E578D285BA79800E126B9 /* DaffyTypeaheadProject */,
+				DEF81E00295283CC00ED5A16 /* DaffyTypeaheadProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +305,13 @@
 				DE4C16FE2952407400E8FE14 /* secrets.json in Resources */,
 				DE4D8DF429523344004E54E3 /* noImage.png in Resources */,
 				430E5799285BA79800E126B9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEF81DFF295283CC00ED5A16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +336,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEF81DFD295283CC00ED5A16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEF81E04295283CD00ED5A16 /* DaffyTypeaheadProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEF81E06295283CD00ED5A16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 430E578D285BA79800E126B9 /* DaffyTypeaheadProject */;
+			targetProxy = DEF81E05295283CD00ED5A16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		430E5797285BA79800E126B9 /* Main.storyboard */ = {
@@ -419,6 +495,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UQNDGL3BG5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DaffyTypeaheadProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -446,6 +523,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UQNDGL3BG5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DaffyTypeaheadProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,6 +544,46 @@
 			};
 			name = Release;
 		};
+		DEF81E08295283CD00ED5A16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UQNDGL3BG5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brielle.DaffyTypeaheadProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DaffyTypeaheadProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DaffyTypeaheadProject";
+			};
+			name = Debug;
+		};
+		DEF81E09295283CD00ED5A16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UQNDGL3BG5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brielle.DaffyTypeaheadProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DaffyTypeaheadProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DaffyTypeaheadProject";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -483,6 +601,15 @@
 			buildConfigurations = (
 				430E57A3285BA79900E126B9 /* Debug */,
 				430E57A4285BA79900E126B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEF81E07295283CD00ED5A16 /* Build configuration list for PBXNativeTarget "DaffyTypeaheadProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEF81E08295283CD00ED5A16 /* Debug */,
+				DEF81E09295283CD00ED5A16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
