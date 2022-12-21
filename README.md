@@ -13,3 +13,4 @@ To run this project, follow the steps below
  { "api_key": "yourapikeyhere" }
  ```
   - Run the project
+  - Run Unit Tests with Cmd + u
